@@ -1,8 +1,8 @@
 export const SITE = {
   name: "Rema's Tuitions",
   tagline: 'Empowering Students Since 1990',
-  phone: '+91 98200 44209',
-  phoneRaw: '919820044209',
+  phone: '+91 9326608966',
+  phoneRaw: '919326608966',
   email: 'remastuitions@gmail.com',
   address: 'C-101, Goodwill Arcade, Sector-10, Nerul (W), Navi Mumbai - 400706',
   hours: ['Mon – Sat: 9:00 AM – 9:00 PM', 'Sunday: 9:00 AM – 1:00 PM'],
