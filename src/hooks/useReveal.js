@@ -1,0 +1,25 @@
+import { useEffect, useRef, useState } from 'react'
+
+// Attach to any element; adds 'in' class when it scrolls into view.
+export function useReveal(threshold = 0.15) {
+  const ref = useRef(null)
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true)
+          obs.unobserve(el)
+        }
+      },
+      { threshold }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [threshold])
+  return [ref, inView]
+}
+
+export default useReveal
